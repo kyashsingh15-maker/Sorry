@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You Mam ❤️</title>
+
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Georgia', serif;
+  background: linear-gradient(135deg, #1e1e2f, #2b2d42);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Container */
+.container {
+  position: relative;
+  max-width: 700px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+  z-index: 2;
+  animation: fadeIn 2s ease-in-out;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 25px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+
+.closing {
+  margin-top: 25px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff758f;
+}
+
+button {
+  margin-top: 30px;
+  padding: 12px 28px;
+  font-size: 16px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  background: #ff4d6d;
+  color: white;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ff758f;
+  transform: scale(1.05);
+}
+
+/* Falling Hearts */
+.heart {
+  position: absolute;
+  top: -10px;
+  color: rgba(255, 105, 180, 0.7);
+  font-size: 20px;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Hearts -->
+<script>
+for (let i = 0; i < 25; i++) {
+  let heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerHTML = "❤";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.animationDuration = (3 + Math.random() * 5) + "s";
+  heart.style.fontSize = (15 + Math.random() * 20) + "px";
+  document.body.appendChild(heart);
+}
+</script>
+
+<div class="container">
+  <h1>Mam ❤️</h1>
+
+  <p>
+    Mujhe pata hai shayad aap mujhse naraz hain… aur agar sach kahun to main khud se bhi thoda naraz hoon.
+    Kyunki jo insaan mere liye itna important hai, usi ko maine hurt kar diya.
+  </p>
+
+  <p>
+    Main perfect nahi hoon. Kabhi kabhi main situations ko samajhne me late ho jata hoon,
+    kabhi sahi words choose nahi kar pata…
+    par ek baat hamesha sach rahegi —
+    aapko takleef dena kabhi bhi mera intention nahi tha.
+  </p>
+
+  <p>
+    Jab aap baat nahi karti, sab kuch thoda khaali sa lagta hai.
+    Main arguments jeetna nahi chahta…
+    main bas aapko khona nahi chahta.
+  </p>
+
+  <p class="closing">
+    Main yeh sab sirf maafi ke liye nahi likh raha…
+    balki isliye, kyunki aapko khona mere liye option hi nahi hai.
+  </p>
+
+  <button onclick="alert('Bas ek mauka de dijiye Mam ❤️')">
+    Can We Start Again?
+  </button>
+
+</div>
+
+</body>
+</html>
